@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Teko:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body class="dark-text-white">
+
+    <!-- CONTAINER -->
+
+
+    <!-- Example Code 
+    
+        <div id="liveAlertPlaceholder"><div><div class="alert alert-success alert-dismissible" role="alert">   <div>Nice, you triggered this alert message!</div>   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div></div></div>
+        <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+        
+         End Example -->
+
+
+
+    <div id="liveAlertPlaceholder">
+        <div>
+            <div class="alert alert-success alert-danger alert-dismissible" role="alert">
+                <div>Some fields are missing</div> <button type="button" class="btn-close" data-bs-dismiss="alert"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- SPAN SPACE -->
+    <span class=""></span>
+    <!-- END=SPAN SPACE -->
+
+    <div class="row d-flex justify-content-center mt-5">
+
+        <div class="title d-flex justify-content-center">
+            <h1>Payment Form Example</h1>
+        </div>
+
+        <div class="col-10">
+            <!-- Card -->
+
+            <form action="" name="contactform" method="post" class="needs-validation row g-3" novalidate id="forms">
+                <div class="col-md-6">
+                    <label for="inputEmail4 " class="form-label ">Card #</label>
+
+                    <input type="email" class="form-control bg-dark text-white " required
+                        autocomplete="cc-number cc-type cc-exp-year cc-exp-month transaction-currency" id="inputEmail4"
+                        placeholder="123-45-678 text-white">
+                </div>
+
+                <!-- CVC -->
+                <!-- alert class alert-warning/danger -->
+                <div class="col-md-3 alert-dismissible ">
+                    <label for="inputPassword4" class="form-label">CVC # <i class="fas fa-lock"></i></label>
+                    <span><i class="far fa-eye-slash" id="togglePassword"></i></span>
+                    <input type="password" class="form-control bg-dark text-white  " required id="inputPassword4">
+                </div>
+
+                <!-- Amount -->
+                <div class="col-md-3">
+                    <span><i class="fa-solid fa-sack-dollar"></i></span>
+                    <label for="inputPassword4" class="form-label">Amount</label>
+                    <input type="password" class="form-control bg-dark text-white " required id="inputPassword4">
+                </div>
+                <!-- First Name-->
+
+                <div class="col-6">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" autocomplete="given-name" required
+                        class="form-control bg-dark " placeholder="First name ">
+
+                    <div class="valid-feedback text-white">
+                        Good!
+                    </div>
+
+                    <div class="invalid-feedback text-white">
+                        Please enter your first name!
+                    </div>
+
+                </div>
+
+                <!--Last Name -->
+                <div class="col-6">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required class="form-control bg-dark text-white"
+                        placeholder="last name">
+                    <div class="valid-feedback text-white">
+                        <p>Good!</p>
+                    </div>
+
+                    <div class="invalid-feedback text-white">
+                        <p>Please enter your first name!</p>
+                    </div>
+                </div>
+                <!-- City -->
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">City</label>
+                    <input type="text" class="form-control bg-dark text-white" id="inputCity">
+                </div>
+
+                <!-- State -->
+
+                <div class="col-md-4">
+                    <label for="inputState" class="form-label">State</label>
+                    <select id="inputState" class="form-select bg-dark text-white">
+                        <option selected>Choose...</option>
+                        <option value="Madrid">Madrid</option>
+                        <option value="Amsterdam">Amsterdam</option>
+                        <option value="London">London</option>
+                        <option value="Lisboa">Lisboa</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="inputZip" class="form-label">Postal Code</label>
+                    <input type="text" class="form-control bg-dark text-white" id="inputZip">
+                </div>
+
+                <!-- BANK POSSIBILITIES -->
+
+                <div class="col-1  ">
+
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option1"
+                        id="inlineRadio1">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        <i class="fa-brands fa-cc-mastercard fa-2x"></i>
+                    </label>
+                </div>
+
+                <div class="form-check col-sm-1 ">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        value="option2 ">
+                    <label class="form-check-label " for="flexCheckChecked">
+                        <i class="fa-brands fa-cc-visa fa-2x"></i>
+                    </label>
+                </div>
+
+                <div class="col-sm-1 ">
+
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option3"
+                        id="inlineRadio3">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        <i class="fa-brands fa-cc-paypal fa-2x"></i>
+
+                    </label>
+                </div>
+                <div class="form-check col-sm-1 ">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option4"
+                        id="inlineRadio4" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                        <i class="fa-brands fa-bitcoin fa-2x"></i>
+                    </label>
+                </div>
+
+
+                <!-- SPAN SPACE -->
+
+                <span class="col-lg-2"></span>
+
+
+                <!-- TEXT CONTAINER -->
+
+                <div class="col-md-4">
+                    <label for="exampleFormControlTextarea1" class="form-label ">Message</label>
+                    <textarea class="form-control bg-dark text-white" id="exampleFormControlTextarea1"
+                        rows="3"></textarea>
+                </div>
+
+                <!-- SPAN SPACE -->
+                <span class="col-12"></span>
+                <!-- END=SPAN SPACE -->
+
+
+                <!-- Sign in -->
+
+
+                <div class=" col-10 d-flex g-0 justify-content-end  ">
+                </div>
+
+                <div class=" col-1 d-flex g-0 justify-content-end  ">
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+
+                </div>
+
+
+                <!-- Cancel -->
+
+
+                <div class=" col-1 g-0 d-flex justify-content-end  ">
+                    <button type="submit" class="btn btn-secondary">Cancel</button>
+                </div>
+        </div>
+
+        <!-- END CONTAINER -->
+
+        <!-- SPAN SPACE -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+
+
+        <!-- paste java here -->
+
+        <script>
+
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (() => {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                const forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', event => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+            })()
+
+        </script>
+
+        <script>
+            const togglePassword = document.querySelector("#togglePassword");
+            const password = document.querySelector("#password");
+
+            togglePassword.addEventListener("click", function () {
+
+                // toggle the type attribute
+                const type = password.getAttribute("type") === "password" ? "text" : "password";
+                password.setAttribute("type", type);
+
+                // toggle the eye icon
+                this.classList.toggle('fa-eye');
+            });
+        </script>
+
+        <script></script>
+
+
+        <script src="https://kit.fontawesome.com/289b61be0c.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
